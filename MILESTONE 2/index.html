@@ -56,19 +56,18 @@
                     <div class="bottom">
 
                         <!-- Parte dinamica -->
-                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex">
+                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex" @click="setActiveContact(contact)">
                             <img :src="contact.image" alt="">
                             <div class="name-contacts d-none d-flex">
                                 <h4>{{ contact.name }}</h4>
                                 <p>{{ contact.lastSeen }}</p>
                             </div>
                         </div>
-                        
+                        <!-- Fine parte dinamica -->
 
                     </div>
 
                 </div>
-
 
                 <!-- chat area -->
                 <div class="col big d-flex d-bug">
@@ -100,8 +99,7 @@
                                         <li>Cancella messaggio</li>
                                     </ul>
                                 </div>
-                                <p class="write">Spedito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-                                    doloribus at
+                                <p class="write">Spedito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe doloribus at
                                     magnam quibusdam dolore. Officiis, obcaecati odit odio omnis vel unde beatae eaque
                                     debitis animi, fuga
                                     voluptate impedit ratione! Nulla.</p>
@@ -115,8 +113,7 @@
                                         <li>Cancella messaggio</li>
                                     </ul>
                                 </div>
-                                <p class="write">Ricevuto Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    non esse
+                                <p class="write">Ricevuto Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt non esse
                                     facere illo cum. Veniam enim porro praesentium. Iste, nostrum perspiciatis soluta ea
                                     fuga nemo id
                                     excepturi inventore natus nisi.</p>
