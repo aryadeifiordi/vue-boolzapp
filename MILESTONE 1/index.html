@@ -16,7 +16,7 @@
     <title>Boolzapp</title>
 </head>
 
-<body class="debug">
+<body class="debug" id="app">
 
     <section class="whatsapp">
         <div class="container">
@@ -55,166 +55,15 @@
 
                     <div class="bottom">
 
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_2.jpg" alt="">
+                        <!-- Parte dinamica -->
+                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex">
+                            <img :src="contact.image" alt="">
                             <div class="name-contacts d-none d-flex">
-                                <h4>Fabio</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
+                                <h4>{{ contact.name }}</h4>
+                                <p>{{ contact.lastSeen }}</p>
                             </div>
-                            <p class="time d-none">16.05</p>
                         </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_3.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Samuele</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">16.03</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_4.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Alessandro B.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.50</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_5.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Alessandro L.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.45</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_6.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Claudia</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.40</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_7.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Federico</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.22</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_8.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Davide</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.15</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_2.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Fabio</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.02</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_3.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Samuele</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">14.49</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_4.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Alessandro B.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">14.33</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_5.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Alessandro L.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">14.19</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_6.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Claudia</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.40</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_7.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Federico</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.22</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_8.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Davide</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.15</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_1.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Fabio</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">16.05</p>
-                        </div>
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_2.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Samuele</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">16.03</p>
-                        </div>
-
-
-                        <div class="info-contacts d-flex">
-                            <img src="./asset/img/avatar_3.jpg" alt="">
-                            <div class="name-contacts d-none d-flex">
-                                <h4>Alessandro B.</h4>
-                                <p>Lorem ipsum dolor sit amet</p>
-                            </div>
-                            <p class="time d-none">15.50</p>
-                        </div>
+                        
 
                     </div>
 
@@ -286,7 +135,7 @@
             </div>
         </div>
     </section>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
     <script src="./asset/js/main.js"></script>
 </body>
 
