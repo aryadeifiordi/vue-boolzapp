@@ -59,13 +59,13 @@
                             <img src="./asset/img/avatar_1.jpg" alt="">
                             <div class="name-contacts d-none d-flex">
                                 <h4>Michele</h4>
-                                <p>Oggi alle 16:26</p>
+                                <p>Oggi alle 16:27</p>
                             </div>
                         </div>
 
-                        <!--  contatti -->
+                        <!-- contatti -->
                         <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex">
-                            <img :src="contacts.image" alt="">
+                            <img :src="contact.image" alt="">
                             <div class="name-contacts d-none d-flex">
                                 <h4>{{ contact.name }}</h4>
                                 <p>{{ contact.lastSeen }}</p>
@@ -136,7 +136,7 @@
             </div>
         </div>
     </section>
-    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="./asset/js/main.js"></script>
 </body>
 

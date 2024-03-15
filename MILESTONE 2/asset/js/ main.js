@@ -7,6 +7,18 @@ const app = Vue.createApp({
                     name: 'Fabio',
                     image: './asset/img/avatar_2.jpg',
                     lastSeen: '16:03',
+                    messages: [
+                        {
+                            type: 'received',
+                            content: 'Ciao come stai?',
+                            time: '16:30'
+                        },
+                        {
+                            type: 'sent',
+                            content: 'Bene grazie! Stasera ci vediamo?',
+                            time: '16:30'
+                        },
+                    ]
                 },
                 {
                     id: 2,
@@ -32,20 +44,19 @@ const app = Vue.createApp({
                     image: './asset/img/avatar_3.jpg',
                     lastSeen: '16:03'
                 },
-                {
-                    id: 6,
-                    name: 'Federico',
-                    image: './asset/img/avatar_3.jpg',
-                    lastSeen: '16:03'
-                },
-                {
-                    id: 7,
-                    name: 'Davide',
-                    image: './asset/img/avatar_3.jpg',
-                    lastSeen: '16:03'
-                }
-            ]
+            ],
+            currentContactIndex: null
         };
+    },
+    methods: {
+        selectContact(index) {
+            this.currentContactIndex = index;
+        }
+    },
+    computed: {
+        currentContact() {
+            return this.currentContactIndex !== null ? this.contacts[this.currentContactIndex] : null;
+        }
     }
 });
 
