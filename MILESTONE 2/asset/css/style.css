@@ -1,4 +1,4 @@
-* general */
+/* general */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -169,7 +169,10 @@ img {
     justify-content: center;
     margin-left: 15px;
 }
-
+.name-contacts.h4.michele {
+    background-color: #888; 
+    color: white; 
+}
 .name-contacts h4 {
     margin-bottom: 5px;
 }
