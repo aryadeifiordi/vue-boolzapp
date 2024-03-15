@@ -54,26 +54,21 @@
                     </div>
 
                     <div class="bottom">
-
                         <!-- Parte dinamica -->
-                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex" @click="setActiveContact(contact)">
+                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex">
                             <img :src="contact.image" alt="">
                             <div class="name-contacts d-none d-flex">
                                 <h4>{{ contact.name }}</h4>
                                 <p>{{ contact.lastSeen }}</p>
                             </div>
                         </div>
-                        <!-- Fine parte dinamica -->
-
                     </div>
-
                 </div>
 
                 <!-- chat area -->
                 <div class="col big d-flex d-bug">
 
                     <div class="my-info d-flex">
-
                         <div class="d-flex">
                             <img src="./asset/img/avatar_1.jpg" alt="">
                             <div class="name-contacts d-flex">
@@ -81,7 +76,6 @@
                                 <p>Ultimo accesso oggi alle 16:26</p>
                             </div>
                         </div>
-
                         <div class="icons">
                             <i class="fa-solid fa-magnifying-glass"></i>
                             <i class="fa-solid fa-paperclip"></i>
@@ -99,7 +93,8 @@
                                         <li>Cancella messaggio</li>
                                     </ul>
                                 </div>
-                                <p class="write">Spedito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe doloribus at
+                                <p class="write">Spedito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
+                                    doloribus at
                                     magnam quibusdam dolore. Officiis, obcaecati odit odio omnis vel unde beatae eaque
                                     debitis animi, fuga
                                     voluptate impedit ratione! Nulla.</p>
@@ -113,7 +108,8 @@
                                         <li>Cancella messaggio</li>
                                     </ul>
                                 </div>
-                                <p class="write">Ricevuto Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt non esse
+                                <p class="write">Ricevuto Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
+                                    non esse
                                     facere illo cum. Veniam enim porro praesentium. Iste, nostrum perspiciatis soluta ea
                                     fuga nemo id
                                     excepturi inventore natus nisi.</p>
@@ -128,7 +124,6 @@
                         <i class="fa-solid fa-microphone"></i>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
