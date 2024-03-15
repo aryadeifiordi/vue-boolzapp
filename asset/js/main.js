@@ -1,4 +1,8 @@
-const app = Vue.createApp({
+const { createApp } = Vue
+
+
+createApp({
+
     data() {
         return {
             contacts: [
@@ -51,9 +55,8 @@ const app = Vue.createApp({
     methods: {
         selectContact(index) {
             this.currentContactIndex = index;
+            console.log('funziona'+index);
         }
     },
     
-});
-
-app.mount('#app');
+}).mount('#app');
