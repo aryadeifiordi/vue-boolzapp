@@ -53,11 +53,7 @@ const app = Vue.createApp({
             this.currentContactIndex = index;
         }
     },
-    computed: {
-        currentContact() {
-            return this.currentContactIndex !== null ? this.contacts[this.currentContactIndex] : null;
-        }
-    }
+    
 });
 
 app.mount('#app');
