@@ -224,8 +224,27 @@ img {
 }
 
 .chat .received {
-    background-color: white;
+    background-color: var(--bz-user);
     align-self: flex-start;
+    color: var(--bz-primary);
+}
+
+.message {
+    width: 60%;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    padding-bottom: 20px;
+}
+
+.message.sent {
+    background-color: var(--bz-sent);
+    color: white;
+}
+
+.message.received {
+    background-color: white;
     color: var(--bz-primary);
 }
 

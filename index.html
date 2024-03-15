@@ -54,7 +54,7 @@
                     </div>
 
                     <div class="bottom">
-                        
+
                         <div class="info-contacts d-flex">
                             <img src="./asset/img/avatar_1.jpg" alt="">
                             <div class="name-contacts d-none d-flex">
@@ -76,7 +76,6 @@
 
                 <!-- chat area -->
                 <div class="col big d-flex d-bug">
-
                     <div class="my-info d-flex">
                         <div class="d-flex">
                             <img src="./asset/img/avatar_1.jpg" alt="">
@@ -94,42 +93,14 @@
 
                     <div class="chat">
                         <div class="right d-flex">
-                            <div v-if="currentContactIndex != null">
-                            <div v-for="(message, index) in contacts[currentContactIndex].messages">
-
-                                {{ message.content }}
-                            </div>
-                            </div>
-
-                            <div class="sent sms-style">
-                                <i class="fa-solid fa-chevron-down"></i>
-                                <div class="hide d-flex">
-                                    <ul class="d-flex">
-                                        <li>Info messaggi</li>
-                                        <li>Cancella messaggio</li>
-                                    </ul>
+                            <div v-if="currentContactIndex !== null">
+                                <div v-for="(message, index) in contacts[currentContactIndex].messages" class="message" :class="{ 'sent': message.type === 'sent', 'received': message.type === 'received' }">
+                                    {{ message.content }}
+                                    <p>{{ message.time }}</p>
                                 </div>
-                                <p class="write">Spedito Lorem ipsum dolor sit amet, consectetur adipisicing elit. Saepe
-                                    doloribus at
-                                    magnam quibusdam dolore. Officiis, obcaecati odit odio omnis vel unde beatae eaque
-                                    debitis animi, fuga
-                                    voluptate impedit ratione! Nulla.</p>
-                                <p>16:13</p>
                             </div>
-                            <div class="received sms-style">
-                                <i class="fa-solid fa-chevron-down"></i>
-                                <div class="hide d-flex">
-                                    <ul class="d-flex">
-                                        <li>Info messaggi</li>
-                                        <li>Cancella messaggio</li>
-                                    </ul>
-                                </div>
-                                <p class="write">Ricevuto Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt
-                                    non esse
-                                    facere illo cum. Veniam enim porro praesentium. Iste, nostrum perspiciatis soluta ea
-                                    fuga nemo id
-                                    excepturi inventore natus nisi.</p>
-                                <p>16:15</p>
+                            <div v-else>
+                                Non è stato selezionato nessun contatto.
                             </div>
                         </div>
                     </div>
