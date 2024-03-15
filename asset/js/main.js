@@ -1,15 +1,13 @@
-const { createApp } = Vue
+const { createApp } = Vue;
 
-
-createApp({
-
+const app = createApp({
     data() {
         return {
             contacts: [
                 {
                     id: 1,
-                    name: 'Fabio',
-                    image: './asset/img/avatar_2.jpg',
+                    name: 'Michele',
+                    image: './asset/img/avatar_1.jpg',
                     lastSeen: '16:03',
                     messages: [
                         {
@@ -20,8 +18,8 @@ createApp({
                         {
                             type: 'sent',
                             content: 'Bene grazie! Stasera ci vediamo?',
-                            time: '16:30'
-                        },
+                            time: '16:31'
+                        }
                     ]
                 },
                 {
@@ -47,16 +45,26 @@ createApp({
                     name: 'Claudia',
                     image: './asset/img/avatar_3.jpg',
                     lastSeen: '16:03'
-                },
+                }
             ],
-            currentContactIndex: null
+            currentContactIndex: null,
+            newMessage: ''
         };
     },
     methods: {
         selectContact(index) {
             this.currentContactIndex = index;
-            console.log('funziona'+index);
+        },
+        sendMessage() {
+            if (this.currentContactIndex !== null && this.newMessage.trim() !== '') {
+                this.contacts[this.currentContactIndex].messages.push({
+                    type: 'sent',
+                    content: this.newMessage,
+                    time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                });
+
+                this.newMessage = '';
+            }
         }
-    },
-    
+    }
 }).mount('#app');
