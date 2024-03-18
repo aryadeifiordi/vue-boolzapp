@@ -12,7 +12,7 @@
     --bz-body-b: #dadbd4;
     --bz-user: #ebe9eb;
     --bz-notification: #8edafc;
-    --bz-sent: #d5f9ba; /* colore verde per i messaggi inviati */
+    --bz-sent: #d5f9ba;
     --bz-border: #d6d6d6;
     --bz-input-sms: #f3eeea;
 }
@@ -216,18 +216,7 @@ img {
     align-items: end;
 }
 
-.chat .sent {
-    background-color: var(--bz-sent); /* colore verde per i messaggi inviati */
-    align-self: flex-end;
-    color: white; /* testo bianco */
-}
-
-.chat .received {
-    background-color: white; /* sfondo bianco per i messaggi ricevuti */
-    color: var(--bz-primary); /* colore testo definito in CSS */
-}
-
-.message {
+.chat .message {
     width: 60%;
     margin-bottom: 10px;
     padding: 20px;
@@ -236,39 +225,30 @@ img {
     padding-bottom: 20px;
 }
 
-.message.sent {
-    background-color: var(--bz-sent); /* colore verde per i messaggi inviati */
-    color: white; /* testo bianco */
+.chat .message.sent {
+    background-color: var(--bz-sent); 
+    color: white; 
 }
 
-.message.received {
-    background-color: white; /* sfondo bianco per i messaggi ricevuti */
-    color: var(--bz-primary); /* colore testo definito in CSS */
+.chat .message.received {
+    background-color: white; 
+    color: var(--bz-primary); 
 }
 
-.sms-style {
-    width: 60%;
-    margin-bottom: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    position: relative;
-    padding-bottom: 20px;
-}
-
-.chat i,
-.chat p:last-child {
+.chat .message i,
+.chat .message p:last-child {
     position: absolute;
     right: 0;
     color: var(--bz-darkgrey);
     font-size: 14px;
 }
 
-.chat p:last-child {
+.chat .message p:last-child {
     font-size: 10px;
     padding: 0 5px;
 }
 
-.chat i {
+.chat .message i {
     margin: 0 15px;
     cursor: pointer;
 }
@@ -287,16 +267,16 @@ img {
     z-index: 1;
 }
 
-.chat i:hover + .hide {
+.chat .message:hover + .hide {
     display: block;
 }
 
-.hide ul {
+.chat .hide ul {
     align-items: center;
     flex-direction: column;
 }
 
-.hide li {
+.chat .hide li {
     list-style: none;
     padding: 13px 0 10px;
 }

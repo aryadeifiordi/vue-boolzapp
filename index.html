@@ -94,7 +94,7 @@
                     <div class="chat">
                         <div class="right d-flex">
                             <div v-if="currentContactIndex !== null">
-                                <div v-for="(message, index) in contacts[currentContactIndex].messages" :key="index" :class="message.type">
+                                <div v-for="(message, index) in contacts[currentContactIndex].messages" :key="index" :class="[message.type, 'message']">
                                     {{ message.content }}
                                 </div>
                             </div>
