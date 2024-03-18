@@ -48,7 +48,8 @@ const app = createApp({
                 }
             ],
             currentContactIndex: null,
-            newMessage: ''
+            newMessage: '',
+            searchText: '' // Nuova variabile per memorizzare il testo di ricerca
         };
     },
     methods: {
@@ -74,6 +75,11 @@ const app = createApp({
 
                 this.newMessage = '';
             }
+        },
+        filterContacts() {
+            return this.contacts.filter(contact =>
+                contact.name.toLowerCase().includes(this.searchText.toLowerCase())
+            );
         }
     }
 }).mount('#app');

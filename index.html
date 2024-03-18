@@ -48,7 +48,7 @@
 
                     <div class="research d-none d-flex">
                         <div class="white d-flex">
-                            <input type="text" placeholder="Cerca o inizia una nuova chat">
+                            <input type="text" v-model="searchText" placeholder="Cerca o inizia una nuova chat">
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         </div>
 
                         <!-- contatti -->
-                        <div v-for="(contact, index) in contacts" :key="index" class="info-contacts d-flex" @click="selectContact(index)">
+                        <div v-for="(contact, index) in filterContacts()" :key="index" class="info-contacts d-flex" @click="selectContact(index)">
                             <img :src="contact.image" alt="">
                             <div class="name-contacts d-none d-flex">
                                 <h4>{{ contact.name }}</h4>
