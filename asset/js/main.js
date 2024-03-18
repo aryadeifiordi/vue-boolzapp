@@ -63,6 +63,15 @@ const app = createApp({
                     time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
                 });
 
+                
+                setTimeout(() => {
+                    this.contacts[this.currentContactIndex].messages.push({
+                        type: 'received',
+                        content: 'Ok',
+                        time: new Date().toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'})
+                    });
+                }, 1000);
+
                 this.newMessage = '';
             }
         }
